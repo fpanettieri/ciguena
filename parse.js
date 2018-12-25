@@ -12,22 +12,27 @@ const output_dir = './out';
 log.info("BEGIN");
 
 function mkdir(dir) {
-  if (!fs.existsSync(output_dir)){
-    log.log('creating folder:', dir);
-    fs.mkdirSync(dir);
+  if (!fs.existsSync(dir)){
+    log.log('creating dir:', dir);
+    fs.mkdirSync(dir, { recursive: true });
   } else {
-    log.log('folder already exists:', dir);
+    log.log('dir already exists:', dir);
   }
 }
 
 mkdir(output_dir);
 
-return;
-
 fs.createReadStream('gpsfarma.csv')
   .pipe(csv())
   .on('data', (data) => {
     // results.push(data);
+
+    let dir = data['Productos-Href'];
+    dir = dir.replace('https://www.gpsfarma.com/', '');
+    dir = dir.replace(/(\.html)$/, '');
+    dir = dir.replace(/\/$/, '');
+    dir = dir.replace(/-/g, '_');
+    mkdir(dir);
 
 
     // create folder
