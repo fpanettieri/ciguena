@@ -24,7 +24,9 @@ function mkdir(dir) {
 function download () {
   const data = results.pop();
   if (!data) { return; }
+  console.log('');
   log.log(`downloading ${data['Url-Imagen']}`);
+  log.log(`${results.length} files remaining`);
 
   let dir = data['Productos-Href'];
   dir = dir.replace('https://www.gpsfarma.com/', '');
