@@ -7,7 +7,6 @@ const logger = require('./logger');
 const log = new logger(`[ciguena/parse]`);
 const output_dir = './out';
 
-
 // const results = [];
 log.info("BEGIN");
 
@@ -32,11 +31,10 @@ fs.createReadStream('gpsfarma.csv')
     dir = dir.replace(/(\.html)$/, '');
     dir = dir.replace(/\/$/, '');
     dir = dir.replace(/-/g, '_');
-    mkdir(dir);
+    mkdir(`${output_dir}/${dir}`);
 
-
-    // create folder
     // download image
+    // rename img
   })
   .on('end', () => {
     log.info("END");
