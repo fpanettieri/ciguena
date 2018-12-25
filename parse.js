@@ -25,8 +25,8 @@ function download () {
   const data = results.pop();
   if (!data) { return; }
   console.log('');
-  log.log(`downloading ${data['Url-Imagen']}`);
   log.log(`${results.length} files remaining`);
+  log.log(`downloading ${data['Url-Imagen']}`);
 
   let dir = data['Productos-Href'];
   dir = dir.replace('https://www.gpsfarma.com/', '');
@@ -39,6 +39,7 @@ function download () {
   const file = fs.createWriteStream(file_name);
 
   log.log(`downloading ${data['Url-Imagen']}`);
+  log.log(`saving as ${file_name}`);
   const request = https.get(data['Url-Imagen'], function(response) {
     response.pipe(file);
     file.on('finish', () => {
