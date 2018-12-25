@@ -5,17 +5,22 @@ const fs = require('fs');
 const logger = require('./logger');
 
 const log = new logger(`[ciguena/parse]`);
-const output_dir = 'out';
+const output_dir = './out';
 
 
 // const results = [];
-
 log.info("BEGIN");
 
-log.log('creating output folder');
-if (!fs.existsSync(output_dir)){
-  fs.mkdirSync(output_dir);
+function mkdir(dir) {
+  if (!fs.existsSync(output_dir)){
+    log.log('creating folder:', dir);
+    fs.mkdirSync(dir);
+  } else {
+    log.log('folder already exists:', dir);
+  }
 }
+
+mkdir(output_dir);
 
 return;
 
