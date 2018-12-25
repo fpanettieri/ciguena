@@ -1,0 +1,10 @@
+{
+  "name": "ciguena-parser",
+  "version": "0.1.0",
+  "description": "Parse ciguena csv",
+  "author": "Fabio Panettieri",
+  "private": true,
+  "dependencies": {
+    "csv": "5.0.1"
+  }
+}
