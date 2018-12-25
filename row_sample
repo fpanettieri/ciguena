@@ -1,0 +1,12 @@
+Row {
+  Categorias: 'Maquillaje',
+  'Categorias-Href': 'https://www.gpsfarma.com/maquillaje.html',
+  'Productos-Href':
+   'https://www.gpsfarma.com/maquillaje/quitaesmalte-para-u-as-care-ultra-efectivo.html',
+  Nombre: 'Quitaesmalte-para-Uñas-Care-Ultra-Efectivo',
+  Descripcion:
+   'Combinación-perfecta-entre-eficiencia-y-cuidado.98%-de-acetona-para-remover-los-tonos-mas-dificiles.',
+  Precio: '$-81,59',
+  'Url-Imagen':
+   'https://media.gpsfarma.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/2/3/237845-309971370472.jpg',
+  SKU: '309971370472' }

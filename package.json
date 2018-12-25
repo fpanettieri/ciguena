@@ -5,6 +5,7 @@
   "author": "Fabio Panettieri",
   "private": true,
   "dependencies": {
-    "csv": "5.0.1"
+    "csv": "5.0.1",
+    "csv-parser": "2.1.0"
   }
 }
